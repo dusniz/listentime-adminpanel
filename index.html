@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ListenTime | Admin panel</title>
+  </head>
+
+  <body>
+    <div class="app-name-block">
+      <h1 class="app-name">ListenTime</h1>
+      <h2 class="admin-panel-desc">Admin panel</h2>
+    </div>
+
+    <div id="app">
+      <div>
+        <h2>Music service</h2>
+        <hr>
+
+        <div class="card">
+          <p>Выбрать и загрузить музыкальный файл:</p>
+          <form id="send-music">
+            <input id="choose-music" 
+                   type="file" 
+                   accept=".mp3"
+                   name="file" />
+            <button id="send-music-button" 
+                    type="submit">
+              Загрузить
+            </button>
+          </form>
+        </div>
+
+        <p class="read-the-docs">
+          (C) ListenTime
+        </p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
