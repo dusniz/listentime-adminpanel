@@ -1,12 +1,11 @@
-export async function uploadFiles(data: FormData): Promise<any> {
-  const headers = new Headers()
-  headers.set('Content-Type', 'multipart/form-data')
+interface ResponseData {
+  file_name: string;
+}
 
-  const request: RequestInfo = new Request('http://localhost:8000/music', {
-  method: 'POST',
-    // headers: headers,
+export async function uploadFiles(data: FormData): Promise<ResponseData> {
+  const request = await fetch('http://localhost:8000/music', {
+    method: 'POST',
     body: data
   })
-
-  console.log((await (fetch(request))).json())
+  return request.json();
 }
